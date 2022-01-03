@@ -64,11 +64,13 @@ const record = [
 function superbowlWin(record){
     let result = record.find(findWin)
     console.log(result)
-    return result.year
+    return !!result ? result.year : undefined
 }
 
+
+
 function findWin(object){
-    console.log(object.result)
+    // console.log(object.result)
     if (object.result === 'W')
         return object.year
 }
